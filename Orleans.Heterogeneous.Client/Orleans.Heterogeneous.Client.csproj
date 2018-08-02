@@ -5,4 +5,18 @@
     <TargetFramework>netcoreapp2.0</TargetFramework>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <LangVersion>7.1</LangVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Orleans.Client" Version="2.0.3" />
+    <PackageReference Include="Microsoft.Orleans.OrleansCodeGenerator.Build" Version="2.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Orleans.Heterogeneous.Interfaces1\Orleans.Heterogeneous.Interfaces1.csproj" />
+    <ProjectReference Include="..\Orleans.Heterogeneous.Interfaces2\Orleans.Heterogeneous.Interfaces2.csproj" />
+  </ItemGroup>
+
 </Project>
